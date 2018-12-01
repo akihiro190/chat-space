@@ -3,7 +3,7 @@
     box-sizing: border-box;
     height: 100%;
     .header {
-      background-color: #253141;
+      background-color: $dark-purple;
       height: 100px;
       line-height: 100px;
       padding: 0 20px;
@@ -25,7 +25,7 @@
       }
     }
     .groups {
-      background-color: #2f3e51;
+      background-color: $light-purple;
       height: calc(100vh - 100px);
       padding: 0 20px;
       .group {
