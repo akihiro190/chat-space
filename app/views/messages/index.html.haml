@@ -8,10 +8,10 @@
       %ul.header__menus
         %li.header__menus--list
           %a{:href => ""}
-            %i.fa.fa-edit
+            = fa_icon 'edit'
         %li.header__menus--list
           %a{:href => ""}
-            %i.fa.fa-cog
+            = fa_icon 'cog'
 
     .groups
       .group
@@ -48,7 +48,7 @@
         %input{:class => "form__message", :placeholder => "type a message", :type => "text", :name => "text"}
         .form__image
           %label{:class => "form__image--i"}
-            %i.fa.fa-image
+            = fa_icon 'image'
             %input{:class => "hidden", :type => "file"}
         %input{:class => "form__bottun", :name => "message", :type => "submit", :value => "Send"}
 
