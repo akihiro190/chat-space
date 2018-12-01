@@ -76,8 +76,11 @@
       float:left;
       height: 50px;
       padding-right: 10px;
-      &--icon {
+      &--i {
         line-height: 50px;
+      }
+      .hidden {
+        display: none;
       }
     }
     &__bottun {
