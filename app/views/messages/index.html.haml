@@ -1,24 +1,7 @@
-= render partial: "notification"
 
 .wrapper
-  .side_menu
-    .header
-      %h3.header__name
-        akihiro
-      %ul.header__menus
-        %li.header__menus--list
-          %a{:href => ""}
-            = fa_icon 'edit'
-        %li.header__menus--list
-          %a{:href => ""}
-            = fa_icon 'cog'
 
-    .groups
-      .group
-        .group__name
-          Sample
-        .group__message
-          こんにちは
+  = render 'side_menu'
 
 
   .chat
