@@ -35,6 +35,7 @@
     height: calc(100vh - 100px - 90px);
     box-sizing: border-box;
     background-color: $gray;
+    overflow: scroll;
     .message {
       padding: 46px 40px 0;
       color: $dark-gray;
@@ -71,19 +72,21 @@
       float: left;
       border: none;
     }
-    &__image {
-      background-color: $white;
-      float:left;
-      height: 50px;
-      padding-right: 10px;
-      &--i {
-        line-height: 50px;
-      }
-      .hidden {
-        display: none;
+    &__mask {
+      &__image {
+        background-color: $white;
+        float:left;
+        height: 50px;
+        padding-right: 10px;
+        .icon {
+          line-height: 50px;
+        }
+        .hidden {
+          display: none;
+        }
       }
     }
-    &__bottun {
+    &__submit {
       background-color: $light-blue;
       margin-left: 15px;
       float: right;

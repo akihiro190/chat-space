@@ -34,8 +34,8 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|text|text||
-|image|text||
+|content|string||
+|image|string||
 |user|references|null: false, foreign_key: true|
 |group|references|null: false, foreign_key: true|
 

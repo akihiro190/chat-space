@@ -28,14 +28,17 @@
       background-color: $light-purple;
       height: calc(100vh - 100px);
       padding: 0 20px;
+      overflow: scroll;
       .group {
         color: $white;
         padding: 20px 0 40px;
         &__name {
+          color: $white;
           font-size: 15px;
           padding-bottom: 5px;
         }
         &__message {
+          color: $white;
           font-size: 11px;
         }
       }
