@@ -35,6 +35,7 @@
     height: calc(100vh - 100px - 90px);
     box-sizing: border-box;
     background-color: $gray;
+    overflow: scroll;
     .message {
       padding: 46px 40px 0;
       color: $dark-gray;
