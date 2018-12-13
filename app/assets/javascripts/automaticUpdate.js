@@ -22,18 +22,18 @@ $(function(){
   }
   var interval = setInterval(function() {
     if (window.location.href.match(/\/groups\/\d+\/messages/)) {
+    var message_id = $('.message:last').data('messageId');
     $.ajax({
       url: location.href,
+      data: {
+        message: { id: message_id }
+      },
       dataType: 'json'
     })
     .done(function(messages) {
-      var id = $('.message:last').data('messageId');
-      console.log(id)
       var insertHTML = '';
         messages.forEach(function(message){
-          if (message.id > id ) {
-            insertHTML += buildHTML(message);
-          }
+          insertHTML += buildHTML(message);
         });
       $('.messages').append(insertHTML);
       $(".messages").animate({scrollTop: $('.messages')[0].scrollHeight}, 'fast');
