@@ -20,27 +20,29 @@ $(function(){
     </div>`
     return html;
   }
-  $('#new_message').on('submit', function(e){
-    e.preventDefault();
-    var formData = new FormData(this);
-    var url = $(this).attr('action')
+  var interval = setInterval(function() {
+    if (window.location.href.match(/\/groups\/\d+\/messages/)) {
+    var message_id = $('.message:last').data('messageId');
     $.ajax({
-      url: url,
-      type: "POST",
-      data: formData,
-      dataType: 'json',
-      processData: false,
-      contentType: false
+      url: location.href,
+      data: {
+        message: { id: message_id }
+      },
+      dataType: 'json'
     })
-    .done(function(data){
-      var html = buildHTML(data);
-      $('.messages').append(html);
+    .done(function(messages) {
+      var insertHTML = '';
+      messages.forEach(function(message){
+        insertHTML += buildHTML(message);
+      });
+      $('.messages').append(insertHTML);
       $(".messages").animate({scrollTop: $('.messages')[0].scrollHeight}, 'fast');
-      $('#new_message')[0].reset();
-      $('.form__submit').attr('disabled', false);
     })
-    .fail(function(){
-      alert('error');
-    })
-  });
+    .fail(function() {
+      alert('error')
+    });
+  } else {
+    crearInterval(interval);
+  }
+  } , 5000 );
 });
