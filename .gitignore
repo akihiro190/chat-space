@@ -19,3 +19,4 @@
 public/uploads/*
 
 app/assets/stylesheets/application.scss
+config/secrets.yml
