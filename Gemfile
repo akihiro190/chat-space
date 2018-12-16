@@ -66,3 +66,7 @@ gem 'mini_magick'
 gem 'pry-rails'
 gem 'pry-byebug'
 gem 'pry-stack_explorer'
+
+group :production do
+  gem 'unicorn'
+end
